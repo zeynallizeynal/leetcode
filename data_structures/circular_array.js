@@ -14,10 +14,26 @@ class CircularArray {
     this.count++;
   }
 
+  removeFirst() {
+    const val = this.arr[this.start];
+    this.arr[this.start] = null;
+    this.start = (this.start + 1) % this.size;
+    this.count--;
+    return val;
+  }
+
   addLast(v) {
     this.arr[this.end] = v;
     this.end = (this.end + 1) % this.size;
     this.count++;
+  }
+
+  removeLast() {
+    this.end = (this.end - 1 + this.size) % this.size;
+    const val = this.arr[this.end];
+    this.arr[this.end] = null;
+    this.count--;
+    return val;
   }
 
   get first() {
@@ -25,7 +41,7 @@ class CircularArray {
   }
 
   get last() {
-    return this.arr[this.end];
+    return this.arr[(this.end - 1 + this.size) % this.size];
   }
 
   // print() {
@@ -40,4 +56,10 @@ class CircularArray {
 // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 const ca = new CircularArray(10);
 ca.addFirst(95);
-console.log(ca.start);
+ca.addLast(43);
+ca.addLast(56);
+console.log(ca.start, ca.end);
+console.log(ca.first, ca.last);
+
+console.log(ca.removeLast());
+console.log(ca.first, ca.last);
