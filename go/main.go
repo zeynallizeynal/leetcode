@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func main() {
 	//list := NewLinkedListWithValue(10)
 	//list := NewLinkedListFromArray([]int{4, 13, 65, 7, 90, 54, 86, 0, 32})
@@ -13,9 +11,15 @@ func main() {
 	//list.PrintFromHead()
 	//list.PrintFromTail()
 
-	circArr := NewCircularArray(5)
-	circArr.AddBack(5)
-	circArr.AddBack(23)
-	fmt.Println(*circArr.GetBack())
-	fmt.Println(*circArr.GetFront())
+	//circArr := NewCircularArray(5)
+	//circArr.AddBack(5)
+	//circArr.AddBack(23)
+	//fmt.Println(*circArr.GetBack())
+	//fmt.Println(*circArr.GetFront())
+
+	//table := NewHashTable[string, int](1)
+	//table.Put("zeynal", 31)
+	//table.Put("aydan", 90)
+	//
+	//fmt.Println(table.Get("aydan"))
 }
