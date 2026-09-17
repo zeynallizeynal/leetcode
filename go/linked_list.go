@@ -1,11 +1,9 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 type ListNode struct {
-	Value int
+	Value interface{}
 	Next  *ListNode
 	Prev  *ListNode
 }
@@ -13,89 +11,79 @@ type ListNode struct {
 type LinkedList struct {
 	Head *ListNode
 	Tail *ListNode
+	Size int
 }
 
-func NewLinkedListWithValue(val int) *LinkedList {
-	var head = &ListNode{
-		Value: val,
-	}
-	tail := head
-	return &LinkedList{
-		Head: head,
-		Tail: tail,
-	}
+func NewLinkedList() *LinkedList {
+	return &LinkedList{}
 }
 
 func NewLinkedListFromArray(arr []int) *LinkedList {
-	if len(arr) == 0 {
-		return nil
+	list := NewLinkedList()
+	for _, v := range arr {
+		list.PushTail(v)
 	}
-	list := NewLinkedListWithValue(arr[0])
-	head := list.Head
-
-	for i := 1; i < len(arr); i++ {
-		newNode := &ListNode{
-			Value: arr[i],
-		}
-		head.Next = newNode
-		newNode.Prev = head
-		head = head.Next
-	}
-	list.Tail = head
 	return list
 }
 
 func (l *LinkedList) PushTail(val int) {
-	temp := l.Head
-	for temp.Next != nil {
-		temp = temp.Next
-	}
 	newNode := &ListNode{Value: val}
-	temp.Next = newNode
-	newNode.Prev = temp
-	l.Tail = newNode
+	if l.Tail == nil {
+		l.Head = newNode
+		l.Tail = newNode
+	} else {
+		newNode.Prev = l.Tail
+		l.Tail.Next = newNode
+		l.Tail = newNode
+	}
+	l.Size++
 }
 
 func (l *LinkedList) PushHead(val int) {
-	temp := l.Head
-	newNode := &ListNode{
-		Value: val,
+	newNode := &ListNode{Value: val}
+	if l.Head == nil {
+		l.Head = newNode
+		l.Tail = newNode
+	} else {
+		newNode.Next = l.Head
+		l.Head.Prev = newNode
+		l.Head = newNode
 	}
-	newNode.Next = temp
-	temp.Prev = newNode
-	l.Head = newNode
+	l.Size++
 }
 
 func (l *LinkedList) DeleteHead() {
 	if l.Head == nil {
 		return
 	}
-	temp := l.Head
-
-	if temp.Next != nil {
-		temp.Next.Prev = nil
-		l.Head = temp.Next
-		temp.Next = nil
+	l.Head = l.Head.Next
+	if l.Head != nil {
+		l.Head.Prev = nil
 	} else {
 		l.Tail = nil
-		l.Head = nil
 	}
+	l.Size--
 }
 
 func (l *LinkedList) DeleteTail() {
 	if l.Tail == nil {
 		return
 	}
-	temp := l.Tail
-
-	if temp.Prev != nil {
-		temp.Prev.Next = nil
-		l.Tail = temp.Prev
-		temp.Prev = nil
+	l.Tail = l.Tail.Prev
+	if l.Tail != nil {
+		l.Tail.Next = nil
 	} else {
-		l.Tail = nil
 		l.Head = nil
 	}
+	l.Size--
+}
+
+func (l *LinkedList) GetTail() *ListNode {
+	return l.Tail
+}
+
+func (l *LinkedList) GetHead() *ListNode {
+	return l.Head
 }
 
 func (l *LinkedList) PrintFromHead() {
@@ -110,7 +98,7 @@ func (l *LinkedList) PrintFromHead() {
 func (l *LinkedList) PrintFromTail() {
 	temp := l.Tail
 	for temp != nil {
-		fmt.Printf("%d -> ", temp.Value)
+		fmt.Printf("%d <- ", temp.Value)
 		temp = temp.Prev
 	}
 	fmt.Println("nil")
