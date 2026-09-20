@@ -13,10 +13,10 @@
 var preorderTraversal = function (root) {
   if (root === null) return [];
 
-  var ordered = [root.val];
+  var res = [root.val];
 
-  ordered = [ordered, ...preorderTraversal(root.left)];
-  ordered = [ordered, ...preorderTraversal(root.right)];
+  res = [res, ...preorderTraversal(root.left)];
+  res = [res, ...preorderTraversal(root.right)];
 
-  return ordered;
+  return res;
 };
