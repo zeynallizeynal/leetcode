@@ -137,3 +137,37 @@ func G_PreorderTraverse(root *GenericTreeNode) []int {
 	}
 	return res
 }
+
+func G_PostorderTraverse(root *GenericTreeNode) []int {
+	if root == nil {
+		return []int{}
+	}
+	res := []int{}
+	for _, v := range root.Children {
+		res = append(res, G_PreorderTraverse(v)...)
+	}
+	res = append(res, root.Val)
+	return res
+}
+
+func G_LevelOrderTraverse(root *GenericTreeNode) [][]int {
+	if root == nil {
+		return [][]int{}
+	}
+
+	res := [][]int{}
+	q := []*GenericTreeNode{root}
+
+	for len(q) > 0 {
+		size := len(q)
+		sub := []int{}
+		for range size {
+			cur := q[0]
+			q = q[1:]
+			sub = append(sub, cur.Val)
+			q = append(q, cur.Children...)
+		}
+		res = append(res, sub)
+	}
+	return res
+}
