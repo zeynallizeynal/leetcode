@@ -15,8 +15,8 @@ var preorderTraversal = function (root) {
 
   var res = [root.val];
 
-  res = [res, ...preorderTraversal(root.left)];
-  res = [res, ...preorderTraversal(root.right)];
+  res = [...res, ...preorderTraversal(root.left)];
+  res = [...res, ...preorderTraversal(root.right)];
 
   return res;
 };

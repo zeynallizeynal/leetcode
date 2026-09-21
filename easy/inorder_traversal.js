@@ -13,9 +13,9 @@
 var inorderTraversal = function (root) {
   if (root === null) return [];
 
-  var res = [res, ...inorderTraversal(root.left)];
+  var res = [...res, ...inorderTraversal(root.left)];
   res = res.push(root.val);
-  res = [res, ...inorderTraversal(root.right)];
+  res = [...res, ...inorderTraversal(root.right)];
 
   return res;
 };

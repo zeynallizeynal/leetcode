@@ -120,3 +120,20 @@ func LevelOrderTraverse3(root *TreeNode) {
 		}
 	}
 }
+
+// N-ary/multiway tree
+type GenericTreeNode struct {
+	Val      int
+	Children []*GenericTreeNode
+}
+
+func G_PreorderTraverse(root *GenericTreeNode) []int {
+	if root == nil {
+		return []int{}
+	}
+	res := []int{root.Val}
+	for _, v := range root.Children {
+		res = append(res, G_PreorderTraverse(v)...)
+	}
+	return res
+}

@@ -13,8 +13,8 @@
 var postorderTraversal = function (root) {
   if (root === null) return [];
 
-  var res = [res, ...postorderTraversal(root.left)];
-  res = [res, ...postorderTraversal(root.right)];
+  var res = [...res, ...postorderTraversal(root.left)];
+  res = [...res, ...postorderTraversal(root.right)];
   res = res.push(root.val);
 
   return res;
