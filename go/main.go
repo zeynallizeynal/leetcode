@@ -22,5 +22,4 @@ func main() {
 	//table.Put("aydan", 90)
 	//
 	//fmt.Println(table.Get("aydan"))
-
 }
