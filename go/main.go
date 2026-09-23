@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
 	//list := NewLinkedListWithValue(10)
 	//list := NewLinkedListFromArray([]int{4, 13, 65, 7, 90, 54, 86, 0, 32})
@@ -20,6 +22,10 @@ func main() {
 	//table := NewHashTable[string, int](1)
 	//table.Put("zeynal", 31)
 	//table.Put("aydan", 90)
-	//
 	//fmt.Println(table.Get("aydan"))
+
+	trie := NewTrie()
+	trie.Insert("hello")
+	trie.Insert("help")
+	fmt.Println(trie.Search("hello"))
 }
