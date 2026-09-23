@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/zeynallizeynal/leetcode/algorithms"
+)
 
 func main() {
 	//list := NewLinkedListWithValue(10)
@@ -24,8 +28,12 @@ func main() {
 	//table.Put("aydan", 90)
 	//fmt.Println(table.Get("aydan"))
 
-	trie := NewTrie()
-	trie.Insert("hello")
-	trie.Insert("help")
-	fmt.Println(trie.Search("hello"))
+	//trie := NewTrie()
+	//trie.Insert("hello")
+	//trie.Insert("help")
+	//fmt.Println(trie.StartsWith("hel"))
+
+	// algorithm techniques
+	nums := []int{1, 12, -5, -6, 50, 3}
+	fmt.Println(algorithms.FindMaxAverage(nums, 4))
 }

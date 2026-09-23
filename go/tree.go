@@ -8,7 +8,7 @@ type TreeNode struct {
 	Left  *TreeNode
 }
 
-// aka Depth-First
+// RecursiveTraverse aka Depth-First
 func RecursiveTraverse(node *TreeNode) {
 	if node == nil {
 		return
@@ -47,7 +47,7 @@ func PostorderTraverse(node *TreeNode) []int {
 	return res
 }
 
-// aka Breadth-First
+// LevelOrderTraverse1 aka Breadth-First
 func LevelOrderTraverse1(root *TreeNode) {
 	if root == nil {
 		return
