@@ -1,6 +1,8 @@
 package algorithms
 
-import "math"
+import (
+	"math"
+)
 
 //func MaxSubarraySum(nums []int, k int) int {
 //	var sum int
@@ -31,6 +33,44 @@ func MaxSubarraySum(nums []int, k int) int {
 		}
 	}
 	return sum
+}
+
+func MaxSubarrayProduct(nums []int, k int) int {
+	var res = 1
+	for i := 0; i < k; i++ {
+		res *= nums[i]
+	}
+
+	var cur = res
+	for i := 1; i <= len(nums)-k; i++ {
+		cur /= nums[i-1]
+		cur *= nums[i+k-1]
+		if cur > res {
+			res = cur
+		}
+
+	}
+	return res
+}
+
+func TargetSubarraySum(nums []int, target, k int) int {
+	var sum, res int
+	for i := 0; i < k; i++ {
+		sum += nums[i]
+	}
+	if sum == target {
+		res++
+	}
+
+	var cur = sum
+	for i := 1; i <= len(nums)-k; i++ {
+		cur -= nums[i-1]
+		cur += nums[i+k-1]
+		if cur == target {
+			res++
+		}
+	}
+	return res
 }
 
 func FindMaxAverage(nums []int, k int) float64 {

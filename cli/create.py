@@ -9,7 +9,7 @@ def main():
     parser.add_argument("name", help="filename to create")
     parser.add_argument("-f", "--force", action="store_true", help="overwrite file if exists")
     parser.add_argument("-t", "--type", choices=["easy", "medium", "hard"], default="easy", help="difficulty type")
-    parser.add_argument("-e", "--extension", choices=["py", "js"], default="py", help="select extension for the file. default is .py")
+    parser.add_argument("-e", "--extension", choices=["py", "js"], default="js", help="select extension for the file. default is .js")
     
     args = parser.parse_args()
     

@@ -39,5 +39,8 @@ func main() {
 	// fmt.Println(algorithms.ContainsDuplicate([]int{1, 2, 3, 4, 1}))
 	// fmt.Println(algorithms.ContainsNearbyDuplicate([]int{1, 0, 1, 1}, 1))
 
-	fmt.Println(algorithms.SmallestIndex([]int{1, 3, 2}))
+	// fmt.Println(algorithms.SmallestIndex([]int{1, 3, 2}))
+
+	// fmt.Println(algorithms.MaxSubarrayProduct([]int{1, 4, 1, 6, -3, 3, -5, 2, 26}, 4))
+	fmt.Println(algorithms.TargetSubarraySum([]int{2, 3, 2, 2, 3, 1, 3, 8, 5, 0, 2, 4}, 7, 3))
 }
