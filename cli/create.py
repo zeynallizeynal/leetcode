@@ -4,14 +4,12 @@ import argparse
 import os
 import sys
 
-import pyperclip
-
 def main():
     parser = argparse.ArgumentParser(description="Create a leetcode file")
     parser.add_argument("name", help="filename to create")
     parser.add_argument("-f", "--force", action="store_true", help="overwrite file if exists")
     parser.add_argument("-t", "--type", choices=["easy", "medium", "hard"], default="easy", help="difficulty type")
-    parser.add_argument("-e", "--extension", choices=["py", "js"], default="js", help="select extension for the file")
+    parser.add_argument("-e", "--extension", choices=["py", "js"], default="py", help="select extension for the file. default is .py")
     
     args = parser.parse_args()
     
@@ -24,7 +22,7 @@ def main():
         sys.exit(1)
     
     with open(filepath, "w") as f:
-        f.write(pyperclip.paste())
+        f.write("")
     
     print(f"created: {filepath}")
 

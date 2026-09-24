@@ -34,6 +34,10 @@ func main() {
 	//fmt.Println(trie.StartsWith("hel"))
 
 	// algorithm techniques
-	nums := []int{1, 12, -5, -6, 50, 3}
-	fmt.Println(algorithms.FindMaxAverage(nums, 4))
+	// nums := []int{1, 12, -5, -6, 50, 3}
+	// fmt.Println(algorithms.FindMaxAverage(nums, 4))
+	// fmt.Println(algorithms.ContainsDuplicate([]int{1, 2, 3, 4, 1}))
+	// fmt.Println(algorithms.ContainsNearbyDuplicate([]int{1, 0, 1, 1}, 1))
+
+	fmt.Println(algorithms.SmallestIndex([]int{1, 3, 2}))
 }

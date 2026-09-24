@@ -1,5 +1,7 @@
 package algorithms
 
+import "math"
+
 //func MaxSubarraySum(nums []int, k int) int {
 //	var sum int
 //	for i := 0; i <= len(nums)-k; i++ {
@@ -46,4 +48,27 @@ func FindMaxAverage(nums []int, k int) float64 {
 		}
 	}
 	return res / float64(k)
+}
+
+func ContainsDuplicate(nums []int) bool {
+	m := make(map[int]struct{})
+	for i := 0; i < len(nums); i++ {
+		if _, ok := m[nums[i]]; ok {
+			return true
+		}
+		m[nums[i]] = struct{}{}
+	}
+	return false
+}
+
+func ContainsNearbyDuplicate(nums []int, k int) bool {
+	m := make(map[int]int)
+	for i := 0; i < len(nums); i++ {
+		n, ok := m[nums[i]]
+		if ok && math.Abs(float64(i-n)) <= float64(k) {
+			return true
+		}
+		m[nums[i]] = i
+	}
+	return false
 }
