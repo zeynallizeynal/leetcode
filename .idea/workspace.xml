@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a4709f09-f7c7-4700-b266-6b4653e9f6fe" name="Changes" comment="Add level-order traversal implementation in Go">
+      <change afterPath="$PROJECT_DIR$/go/algorithms/string.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go/linked_list.go" beforeDir="false" afterPath="$PROJECT_DIR$/go/linked_list.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/go/main.go" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="535" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" url="file:///usr/local/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;zeynallizeynal&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/zeynallizeynal/leetcode.git&quot;,
+    &quot;accountId&quot;: &quot;cd087f7a-7cf3-4e41-945c-87bf82528a9c&quot;
+  }
+}</component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="5.598596605272701E-13" />
+      <entry key="MS500" value="0.003545064038639069" />
+      <entry key="S2" value="0.26011682017522475" />
+      <entry key="S5" value="0.760592693063297" />
+      <entry key="S10" value="1.1921301374497506" />
+      <entry key="S30" value="1.7186966232010554" />
+      <entry key="S60" value="2.5022591610396714" />
+      <entry key="M2" value="4.99732117571821" />
+      <entry key="M5" value="15.432937353103943" />
+      <entry key="M10" value="32.70881220342645" />
+      <entry key="M15" value="50.34949295390256" />
+      <entry key="M30" value="113.53512387258631" />
+      <entry key="H1" value="233.74827571490513" />
+      <entry key="H2" value="423.8616458578023" />
+      <entry key="H4" value="669.9953395659435" />
+      <entry key="D1" value="1122.5659419647704" />
+      <entry key="W1" value="1243.9924516665894" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="1.0012275521235565" />
+      <entry key="MS500" value="1.261702570493644" />
+      <entry key="S2" value="1.7152403336412285" />
+      <entry key="S5" value="1.874542256688796" />
+      <entry key="S10" value="1.9351696405940633" />
+      <entry key="S30" value="1.977982501098119" />
+      <entry key="S60" value="2.0124854600481887" />
+      <entry key="M2" value="2.556589509328187" />
+      <entry key="M5" value="7.125041265052784" />
+      <entry key="M10" value="14.623442339064878" />
+      <entry key="M15" value="20.630920779476572" />
+      <entry key="M30" value="34.61540427498391" />
+      <entry key="H1" value="60.230223291661" />
+      <entry key="H2" value="126.8230130962053" />
+      <entry key="H4" value="241.13971313165914" />
+      <entry key="D1" value="476.776578749221" />
+      <entry key="W1" value="542.1090206651111" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.019642822322549137" />
+      <entry key="MS500" value="0.5291782663397062" />
+      <entry key="S2" value="1.537945328823764" />
+      <entry key="S5" value="2.382974517696699" />
+      <entry key="S10" value="2.977406798790894" />
+      <entry key="S30" value="3.6390548685989765" />
+      <entry key="S60" value="4.483533943641724" />
+      <entry key="M2" value="7.52992818107526" />
+      <entry key="M5" value="22.523068767441533" />
+      <entry key="M10" value="47.29454348862597" />
+      <entry key="M15" value="70.94431872087594" />
+      <entry key="M30" value="148.11885177263852" />
+      <entry key="H1" value="293.95059734771365" />
+      <entry key="H2" value="550.6570633559297" />
+      <entry key="H4" value="911.1100346768734" />
+      <entry key="D1" value="1599.3345280207993" />
+      <entry key="W1" value="1786.100179134485" />
+    </decayedShown>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="com.goide.dfa.ui.problems.view" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3JNECoI0OL7vtDIAScXNCXkPJlH" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultGoTemplateProperty": "Go File",
+    "Go Build.go build github.com/zeynallizeynal/leetcode.executor": "Run",
+    "Go Build.go build github.com/zeynallizeynal/leetcode/cmd.executor": "Run",
+    "Go Build.go run leetcode.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.GoLinterPluginOnboardingV2": "true",
+    "RunOnceActivity.GoLinterPluginStorageMigration": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.go.analysis.ui.options.defaults": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "go.sdk.automatically.set": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/Users/zeynal/GolandProjects/leetcode/easy",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "editor.preferences.completion.inline",
+    "to.speed.mode.migration.done": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/easy" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/cli/create" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="GoApplicationRunConfiguration" />
+      </set>
+    </option>
+    <option name="configurationStatuses">
+      <map>
+        <entry key="GoApplicationRunConfiguration">
+          <value>
+            <map>
+              <entry key="go run leetcode" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="go run leetcode" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="LeetCode" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/zeynallizeynal/leetcode" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-gosdk-72a9cf600ed8-3dd3895e5e08-org.jetbrains.plugins.go.sharedIndexes.bundled-GO-261.26222.72" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-GO-261.26222.72" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a4709f09-f7c7-4700-b266-6b4653e9f6fe" name="Changes" comment="" />
+      <created>1789493004806</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1789493004806</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add doubly linked list implementation in Go with basic operations and examples" />
+    <MESSAGE value="Add circular array implementation in Go with basic operations and usage example" />
+    <MESSAGE value="Add hash table implementation in Go with basic operations and usage example" />
+    <MESSAGE value="Add tree traversal implementations (preorder, inorder, postorder) in JavaScript" />
+    <MESSAGE value="Add level-order traversal implementation in Go" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add level-order traversal implementation in Go" />
+  </component>
+  <component name="VgoModernizerVersionTracker">
+    <upgrades>
+      <map>
+        <entry key="$PROJECT_DIR$/go/go.mod">
+          <value>
+            <VersionUpgradeInfo>
+              <version>1.26.2</version>
+              <timestamp>1790194467524</timestamp>
+            </VersionUpgradeInfo>
+          </value>
+        </entry>
+      </map>
+    </upgrades>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/go/algorithms/string.go</url>
+          <line>2</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

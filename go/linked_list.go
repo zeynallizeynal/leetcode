@@ -104,8 +104,8 @@ func (l *LinkedList) PrintFromTail() {
 	fmt.Println("nil")
 }
 
-// func MergeSortedLists(l1, l2 *ListNode) *ListNode {
-// 	res := &ListNode{}
-// 	h1 := l1
-// 	h2 := l2
-// }
+//func MergeSortedLists(l1, l2 *ListNode) *ListNode {
+//	res := &ListNode{}
+//	h1 := l1
+//	h2 := l2
+//}
