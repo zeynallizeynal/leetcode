@@ -14,7 +14,7 @@ def main():
     args = parser.parse_args()
     
     filename: str = os.path.basename(args.name)
-    filename = filename.lower().replace(" ", "_").replace("-", "_").replace(".", "") + f".{args.extension}"
+    filename = filename.lower().replace(" ", "_").replace("-", "_").replace(".", "").replace("(", "").replace(")", "") + f".{args.extension}"
     filepath = os.path.join(os.getcwd(), args.type, filename)
     
     if os.path.exists(filepath) and not args.force:
