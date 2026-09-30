@@ -16,13 +16,15 @@ class Solution:
             level*=10
             temp//=10
             
-        while x > 0 and level>0:
-            x = x - (x//level * level)
+        while x > 0:
+            res+=x%10*level
+            x//=10
             level//=10
-            print(x)
             
-        
+        res*=sign
+        if res > INT_MAX or res < INT_MIN:
+            return 0
         return res
 
 
-print(Solution().reverse(-321))
+print(Solution().reverse(1))
